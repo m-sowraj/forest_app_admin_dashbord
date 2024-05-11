@@ -38,7 +38,7 @@ function Home() {
           <>
             <div className='px-12 py-12 w-full bg-white'>
               <div className={`${Styles.container1}`}>
-                <div className={Styles.inpDiv1}>
+                <div className={Styles.inpDiv}>
                   <div className='flex items-center'>
                     <div><img src="/assets/search.svg" alt='Search' width={100} height={100} className={Styles.search}/></div>
                     <div>
@@ -56,7 +56,7 @@ function Home() {
               <div className='px-12 py-8 w-full bg-white'>
                 <div className={`${Styles.container1}`}>
                   <div className={`${Styles.reportName1} text-xl px-4 py-2`} onClick={()=>{setMapOpen(!mapOpen)}}>Make a Report</div>
-                  <div className={Styles.inpDiv}>
+                  <div className={Styles.inpDiv1}>
                     <div className='flex items-center'>
                       <div><img src="/assets/search.svg" alt='Search' width={100} height={100} className={Styles.search}/></div>
                       <div>
@@ -102,7 +102,7 @@ function Home() {
                   </div>
                   <div className={`${Styles.reportCon2}`}>
                     <div>
-                      <div className={`flex flex-col items-center justify-center ${Styles.imgDiv}`}><img src="/assets/camera.svg" alt="camera" width={100} height={100} className={Styles.cameraimg}/><div style={{color:"#1B4332"}}>Click a image</div></div>
+                      <div className={`flex flex-col items-center justify-center ${Styles.imgDiv1}`}><img src="/assets/camera.svg" alt="camera" width={100} height={100} className={Styles.cameraimg}/><div style={{color:"#1B4332"}}>Click a image</div></div>
                     </div>
                     <div className='text-black text-2xl'>OR</div>
                     <div>
@@ -123,7 +123,6 @@ function Home() {
             </div>
           </>
         }
-       
     </div>
   )
 }

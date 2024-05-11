@@ -10,6 +10,7 @@
     border: 1px solid #C0C0C0;
     border-radius: 10px;
     display: flex;
+    flex-grow: .2;
 }
 
 .inpDiv1 {
@@ -111,6 +112,6 @@
 }
 
 .makeareportCon{
-    border-radius: 24px ;
+    border-radius: 24px;
     box-shadow: 0px 72px 80px -48px rgba(34, 58, 40, 1);
 }

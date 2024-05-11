@@ -10,8 +10,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
-  --font: font-family: "Poppins", sans-serif;
-  /* --font:   font-family: "Montserrat", sans-serif;; */
+  --font:"Poppins", sans-serif;
   --green: #1B4332;
   --red: #E04B35;
   --lightgreen: #029664;
@@ -25,10 +24,6 @@
   }
 }
 
-body{
-  font-family: var(--font) !important;
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -37,6 +32,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: var(--font) !important;
 }
 
 @layer utilities {

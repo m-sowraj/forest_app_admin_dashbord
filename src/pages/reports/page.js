@@ -23,8 +23,8 @@ function ReportPage() {
           <div className={Styles.notiDiv}><img src="/assets/notify.svg" alt='Notify' width={100} height={100} className={Styles.noti}/></div>
         </div>
         <div className={`${Styles.container2}`}>
-          <div className={reportStatus == "pending" ? Styles.reportStatusactive : Styles.reportStatus} onClick={()=>setreportStatus("pending")}>Pending reports</div>
-          <div className={reportStatus == "approved" ? Styles.reportStatusactive : Styles.reportStatus} onClick={()=>setreportStatus("approved")}>Approved reports</div>
+          <div className={reportStatus === "pending" ? Styles.reportStatusactive : Styles.reportStatus} onClick={()=>setreportStatus("pending")}>Pending reports</div>
+          <div className={reportStatus === "approved" ? Styles.reportStatusactive : Styles.reportStatus} onClick={()=>setreportStatus("approved")}>Approved reports</div>
         </div>
 
         <div className={`flex flex-wrap gap-4 overflow-scroll ${Styles.allDivs}`}>
