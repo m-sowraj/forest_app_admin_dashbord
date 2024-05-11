@@ -1,0 +1,12 @@
+.makeReport {
+    background-color: #E04B35;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    flex-grow: .5;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}

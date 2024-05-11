@@ -1,0 +1,116 @@
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inpDiv, .inpDiv1 {
+    padding: 5px 15px;
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+    display: flex;
+}
+
+.inpDiv1 {
+    flex-grow: .8;
+}
+
+.notiDiv , .search{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.reportName1 {
+    color: var(--green);
+    font-size: 22px;
+}
+
+.reportStatus{  
+    padding: 4px 8px;
+    background-color: white;
+    color: var(--green);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reportStatusactive {
+    font-size: 16px;
+    padding: 4px 8px;
+    background-color: var(--green);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newreportTit{
+    color: #1B4332;
+    font-size: 3em;
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+.login {
+    color: #58745E;
+}
+
+.reportCon1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 26em;
+    padding: 1em 4em 2em 4em;
+    border-right: 2px solid #029664;
+}
+
+.textdiv{
+    border: 1px solid var(--green);
+    border-radius: 2px;
+}
+
+.subbtn {
+    background-color: #029664;
+    color: white;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.backbtn {
+    border: 1px solid #029664;
+    color: #029664;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.reportCon2 {
+    background-color: #D2E4D6;
+    width: 30em;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 3em 0;
+    border-radius: 0 24px 24px 0;
+}
+
+.cameraimg {
+    width: 30px;
+    height: 30px;
+}
+
+.uploadbtn{
+    color: #029664;
+    border: 1px solid #029664;
+    padding: 6px 35px;
+    border-radius: 8px;
+}
+
+.makeareportCon{
+    border-radius: 24px ;
+    box-shadow: 0px 72px 80px -48px rgba(34, 58, 40, 1);
+}

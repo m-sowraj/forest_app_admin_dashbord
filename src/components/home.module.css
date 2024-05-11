@@ -1,0 +1,47 @@
+
+.active{
+    background-color: var(--green);
+    color: white;
+    cursor: pointer;
+    padding: 4px 16px;
+    border-radius: 5px;
+  }
+  
+  .nav{
+    width: 18em;
+    background-color: #D2E4D6;
+    padding: 1em 3em 1em 1em;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  
+  .options {
+    cursor: pointer;
+    color: var(--green);
+    padding: 4px 16px;
+    border-radius: 5px;
+  }
+  
+  .logos {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .name {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .area {
+    font-size: 10px;
+    color: grey;
+  }
+  
+  .profileimg {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
