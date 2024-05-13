@@ -8,7 +8,8 @@
   }
   
   .nav{
-    width: 18em;
+    min-width: 15em;
+    max-width: 15em;
     background-color: #D2E4D6;
     padding: 1em 3em 1em 1em;
     font-size: 18px;
