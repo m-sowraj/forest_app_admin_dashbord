@@ -7,6 +7,8 @@ import AdminPage from './pages/admin/page';
 import Rewards from './pages/rewards/page';
 import Profile from './pages/profile/page';
 import SignUp from './pages/signup/page';
+import Reset from './pages/reset/page';
+import SignIn from './pages/login/page';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/reset" element={<Reset />} />
+        <Route path="/login" element={<SignIn />} />
       </Routes>
     </>
   );

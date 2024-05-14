@@ -4,3 +4,11 @@
     padding: 4px 8px;
     border-radius: 6px;
 }
+
+.btnback{
+    color: #029664;
+    background-color: none;
+    border: 1px solid #029664;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
