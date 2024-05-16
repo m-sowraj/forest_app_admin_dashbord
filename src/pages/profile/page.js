@@ -1,8 +1,18 @@
 import React from 'react'
 import HomePage from '../../components/NavBar'
 import Styles from './page.module.css'
+import Table from './components/Table';
+import Grid from './components/Table';
 
 function Profile() {
+
+  const data = [
+    { ID: '#583', Date: '9/23/16', 'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' },
+    { ID: '#423', Date: '5/7/16', 'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' },
+    { ID: '#196', Date: '12/10/13', 'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Rejected' },
+    { ID: '#453', Date: '2/11/12', 'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' }
+  ];
+
   return (
     <div className='flex min-h-screen max-h-screen'>
       <HomePage/>
@@ -75,7 +85,9 @@ function Profile() {
                 </div>
               </div>
             </div>
-            <div></div>
+            <div>
+              <Grid data={data} />
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,52 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    margin-top: 1em;
+    background-color: #F3FFF6;
+  }
+
+  .gridContainer *{
+    font-size: 15px;
+  }
+  
+  .gridHeader {
+    display: contents;
+  }
+  
+  .gridBody {
+    display: contents;
+  }
+  
+  .gridRow {
+    display: contents;
+  }
+  
+  .gridItem {
+    background-color: #F3FFF6;
+    padding: 4px 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    display: flex;   
+    justify-content: center;
+    align-items: center;   
+  }
+  
+  .header {
+    background-color: #F3FFF6;
+    font-weight: bold;
+  }
+  
+  .gridPhoto {
+    width: 50px;
+    height: 50px;
+  }
+
+  .accepted {
+    color: green;
+  }
+  
+  .rejected {
+    color: red;
+  }
+  
