@@ -5,6 +5,8 @@ import ResidentalsCon from './components/ResidentalsCon';
 import ResidentailsTable from './components/ResidentailsTable';
 import ForestCon from './components/ForestCon';
 import ForestTable from './components/ForestTable';
+import DashboarCon from './components/DashboarCon';
+import DashboardTable from './components/DashboardTable';
 
 function AdminPage() {
   const data = [
@@ -45,14 +47,35 @@ function AdminPage() {
     }
   ];
 
+  const Requestdata = [
+    { ID: '#583', Date: '9/23/16', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' },
+    { ID: '#423', Date: '5/7/16', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' },
+    { ID: '#196', Date: '12/10/13', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Rejected' },
+    { ID: '#453', Date: '2/11/12', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, 'Cluster name': 'Cluster name', Status: 'Accepted' }
+  ];
+
+  const Requestdata_ = [
+    { ID: '#583', Date: '9/23/16', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, Status: 'Accepted' },
+    { ID: '#423', Date: '5/7/16', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null,Status: 'Accepted' },
+    { ID: '#196', Date: '12/10/13', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null,Status: 'Rejected' },
+    { ID: '#453', Date: '2/11/12', "Name Of Reporter": "James" ,'Report description': 'Report description', Photo: null, Status: 'Accepted' }
+  ];
+
   const [activeItem, setActiveItem] = useState('Requests');
 
   return (
     <div className='flex min-h-screen max-h-screen'>
       <AdminNavBar activeItem={activeItem} setActiveItem={setActiveItem} />
-      <div className='w-full' style={{ backgroundColor: "#D2E4D6" }}>
+      <div className='w-full' style={{ backgroundColor: "#D2E4D6",maxHeight:"100vh",overflow:"scroll" }}>
         <div className='w-full flex flex-col gap-6'>
           <AdminHeader />
+          {activeItem === 'Requests' && (
+            <>
+              <DashboarCon />
+              <DashboardTable data={Requestdata} data_={Requestdata_} />
+            </>
+          )}
+
           {activeItem === 'Residentals' && (
             <>
               <ResidentalsCon />

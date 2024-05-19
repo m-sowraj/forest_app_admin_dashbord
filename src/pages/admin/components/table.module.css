@@ -49,3 +49,19 @@
     color: red;
   }
   
+  .gridContainerReq{
+    grid-template-columns: repeat(7, 2fr);
+  }
+  
+  .gridContainerReq1{
+    padding: 1em;
+    grid-template-columns: repeat(5, .60fr);
+  }
+
+  .gridItem_{
+    background-color: #F3FFF6;
+    padding: 4px 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;   
+  }
