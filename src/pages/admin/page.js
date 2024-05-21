@@ -7,6 +7,9 @@ import ForestCon from './components/ForestCon';
 import ForestTable from './components/ForestTable';
 import DashboarCon from './components/DashboarCon';
 import DashboardTable from './components/DashboardTable';
+import BarChart from './components/BarChart';
+import BarChartCon from './components/BarChart';
+import PieChartCon from './components/PieChart';
 
 function AdminPage() {
   const data = [
@@ -71,6 +74,17 @@ function AdminPage() {
           <AdminHeader />
           {activeItem === 'Requests' && (
             <>
+              <div className='flex py-4 mx-4 items-center justify-between'>
+                <div className='bg-white px-8 py-4' style={{borderRadius:"20px",width:'70%'}}>
+                  <div className='text-lg font-semibold text-black mb-4'>Report Analysis</div>
+                  <BarChartCon/> 
+                </div>
+                <div className='bg-white px-12 py-4' style={{width:"25%",borderRadius:"20px"}}>
+                  <div className='text-lg font-semibold text-black mb-4'>Reports</div>
+                  <PieChartCon/>
+                  <div className='font-sm text-[12px] px-0 text-black'>Total 9 reports submitted on 13 may 2024 7 accepted and 2 declined </div>
+                </div>
+              </div>
               <DashboarCon />
               <DashboardTable data={Requestdata} data_={Requestdata_} />
             </>
