@@ -1,24 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
-
-const data = [
-  { name: 'Jan', uv: 5 },
-  { name: 'Feb', uv: 10 },
-  { name: 'Mar', uv: 15 },
-  { name: 'Apr', uv: 20 },
-  { name: 'May', uv: 25 },
-  { name: 'Jun', uv: 30 },
-  { name: 'Jul', uv: 35 },
-  { name: 'Aug', uv: 40 },
-  { name: 'Sep', uv: 45 },
-  { name: 'Oct', uv: 50 },
-  { name: 'Nov', uv: 35 },
-  { name: 'Dec', uv: 20 },
-];
+import axios from 'axios';
 
 function BarChartCon() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://elephant-tracker-api.onrender.com/api/elephant-sightings/getMonthwiseSightings');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div style={{ width: '100%', height: 250 , backgroundColor:"rgba(7, 86, 5, 0.04)"}}>
+    <div style={{ width: '100%', height: 250, backgroundColor: "rgba(7, 86, 5, 0.04)" }}>
       <ResponsiveContainer>
         <BarChart data={data} barCategoryGap="20%" barGap={5}>
           <XAxis dataKey="name" stroke='0' />

@@ -4,6 +4,8 @@
     gap: 1px;
     margin-top: 1em;
     background-color: #F3FFF6;
+    overflow-y: auto;
+    max-height: 300px;
   }
 
   .gridContainer *{

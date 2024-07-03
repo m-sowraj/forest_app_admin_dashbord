@@ -4,10 +4,13 @@
     gap: 1px;
     margin-top: 1em;
     background-color: #F3FFF6;
+    overflow-y: auto;
+    max-height: 400px;
   }
 
   .gridContainer *{
     font-size: 15px;
+    
   }
   
   .gridHeader {
