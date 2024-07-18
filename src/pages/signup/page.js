@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Styles from './page.module.css';
+import { Navigate } from 'react-router-dom';
 
 function SignUp() {
   const [fullName, setFullName] = useState('');
@@ -45,7 +46,7 @@ function SignUp() {
       });
 
       if (response.data.success) {
-        navigate('/login'); 
+        Navigate('/login'); 
 
         console.log('Sign up successful!');
       } else {
