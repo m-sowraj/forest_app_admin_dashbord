@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Styles from './page.module.css';
-import { Navigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 function SignUp() {
   const [fullName, setFullName] = useState('');
@@ -11,6 +11,8 @@ function SignUp() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [options, setOptions] = useState('Forest Official');
   const [error, setError] = useState('');
+  const navigator = useNavigate();
+
 
   const validateForm = () => {
     if (!fullName || !phoneNumber || !email || !password || !confirmPassword || !options) {
@@ -46,7 +48,7 @@ function SignUp() {
       });
 
       if (response.data.success) {
-        Navigate('/login'); 
+        navigator('/login'); 
 
         console.log('Sign up successful!');
       } else {
