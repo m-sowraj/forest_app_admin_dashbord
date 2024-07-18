@@ -6,6 +6,11 @@ function AdminNavBar({ activeItem, setActiveItem }) {
     setActiveItem(itemName);
   };
 
+  const handlelogout = () => {
+    sessionStorage.clear();
+    window.location.href = '/login';
+  };
+
   const navbarItems = [
     { name: 'Requests', image: '/assets/inrequests.svg', inimage: '/assets/requests.svg' },
     { name: 'Residentals', image: '/assets/inresidentals.svg', inimage: '/assets/residentals.svg' },
@@ -39,12 +44,12 @@ function AdminNavBar({ activeItem, setActiveItem }) {
         ))}
       </div>
       <div className='flex gap-4 px-2 py-4 items-center'>
-        <div>
+        {/* <div>
           <img src="/assets/profileimg.svg" alt='Profile' width={100} height={100} className={Styles.profileimg} />
-        </div>
+        </div> */}
         <div className='flex flex-col gap-1'>
-          <div className={Styles.name}>Kristin Watson</div>
-          <div className={Styles.area}>XYZ Area</div>
+          <div className={Styles.name} onClick={handlelogout} >Logout</div>
+          {/* <div className={Styles.area}>XYZ Area</div> */}
         </div>
       </div>
     </div>

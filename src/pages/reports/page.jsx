@@ -47,7 +47,7 @@ function ReportPage() {
   const approveReport = async (reportId) => {
     try {
       await axios.put(`https://elephant-tracker-api.onrender.com/api/elephant-sightings/${reportId}/confirm`,{
-        officerId: "6660184ddda8c8405a655d9f",
+        officerId:sessionStorage.getItem('Id'),
         confirmationStatus:"confirmed" ,
         NotificationStatus:  "yes"
 
@@ -63,7 +63,8 @@ function ReportPage() {
   const approveAndNotifyReport = async (reportId) => {
     try {
       await axios.put(`https://elephant-tracker-api.onrender.com/api/elephant-sightings/${reportId}/confirm`,{
-        officerId: "6660184ddda8c8405a655d9f",
+        officerId: sessionStorage.getItem('Id'),
+
         confirmationStatus: "confirmed" ,
         NotificationStatus:  "no"
 

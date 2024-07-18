@@ -12,7 +12,8 @@ function Profile() {
 
   useEffect(() => {
     // Replace 'USER_ID' with the actual user ID or fetch it dynamically
-    const userId = '662bd6a5c7bb26949f85185c';
+    const userId = sessionStorage.getItem('Id');
+
 
     // Fetch user data and reports
     axios.post('https://elephant-tracker-api.onrender.com/api/users/reports', { user_id: userId })

@@ -12,6 +12,11 @@ function HomePage() {
     setActive(href);
   };
 
+  const handlelogout = () => {
+    sessionStorage.clear();
+    navigator('/login');
+  };
+
   const navbarItems = [
     { name: 'Home', href: '/', image: '/assets/home.svg', inimage: '/assets/inhome.svg' },
     { name: 'Reports', href: '/reports', image: '/assets/report.svg', inimage: '/assets/inreports.svg' },
@@ -39,10 +44,10 @@ function HomePage() {
         ))}
       </div>
       <div className='flex gap-4 px-2 py-4 items-center'>
-        <div><img src="/assets/profileimg.svg" alt='Profile' width={100} height={100} className={Styles.profileimg} /></div>
+        {/* <div><img src="/assets/profileimg.svg" alt='Profile' width={100} height={100} className={Styles.profileimg} /></div> */}
         <div className='flex flex-col gap-1'>
-          <div className={Styles.name}>Kristin Watson</div>
-          <div className={Styles.area}>XYZ Area</div>
+          <div className={Styles.name} onClick={handlelogout} >Logout</div>
+          {/* <div className={Styles.area}>XYZ Area</div> */}
         </div>
       </div>
     </div>

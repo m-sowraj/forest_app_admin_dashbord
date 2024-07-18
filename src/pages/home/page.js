@@ -1,11 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import HomePage from '../../components/NavBar';
 import MapStyles from './map.module.css';
 import Styles from './home.module.css';
 import MyMapComponent from '../../components/home/mappopup';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 function Home() {
+
+  const navigator = useNavigate();
+  
   const [mapOpen, setMapOpen] = useState(false); 
   const [selectedOption, setSelectedOption] = useState('');
   const [description, setDescription] = useState('');
@@ -19,6 +24,13 @@ function Home() {
   const handleSelectChange = (event) => {
     setSelectedOption(event.target.value);
   };
+
+  useEffect(() => {
+    const id = sessionStorage.getItem('Id');
+    if (!id) {
+      navigator('/login');
+    }
+  }, []);
 
   const handleChange = (event) => {
     const inputDescription = event.target.value;
@@ -49,11 +61,12 @@ function Home() {
     }
 
     const formData = new FormData();
+    const id = await sessionStorage.getItem('Id');
     formData.append('selectedOption', selectedOption);
     formData.append('description', description);
     formData.append('latitude', selectedLocation?.lat || '');
     formData.append('longitude', selectedLocation?.lng || '');
-    formData.append('user_id', "6660184ddda8c8405a655d9f");
+    formData.append('user_id', id); 
     formData.append('user_type', "Officer");
 
 

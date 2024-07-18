@@ -17,7 +17,9 @@ function Rewards() {
   useEffect(() => {
     const fetchRewards = async () => {
       try {
-        const response = await axios.get('https://elephant-tracker-api.onrender.com/api/rewards/user/662bd6a5c7bb26949f85185c');
+        const userId = sessionStorage.getItem('Id');
+
+        const response = await axios.get(`https://elephant-tracker-api.onrender.com/api/rewards/user/${userId}`);
 
         setRewards(response.data.rewards);
       } catch (error) {
